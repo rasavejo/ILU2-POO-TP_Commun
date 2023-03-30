@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+
+// ATTENTION le NB_PERSONNES est considere comme nb_table
 class ReservationRestaurantTest {
 	static ReservationRestaurant reservation;
 	static final int NB_PERSONNES = 2;
