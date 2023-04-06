@@ -5,6 +5,7 @@ public class Client {
 	private String prenom;
 	private String adresseMail;
 	private String mdp;
+	private Reservation[] reservations = new Reservation[20];
 
 	public Client(String nom, String prenom, String adresseMail, String mdp) {
 		this.nom = nom;
@@ -19,6 +20,12 @@ public class Client {
 
 	public boolean connecterClient(String mdp) {
 		return mdp.equals(this.mdp);
+	}
+	
+	public void ajouterReservation(Reservation reservation) {
+		int i;
+		for (i = 0;reservations[i] != null;i++);
+		reservations[i] = reservation;
 	}
 
 	// UNIQUEMENT POUR VERIFICATION

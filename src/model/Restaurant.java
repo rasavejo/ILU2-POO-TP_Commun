@@ -20,4 +20,7 @@ public class Restaurant {
 		 return centrale.reserver(numeroEntite, formulaire);
 	 }
 	
+	 public String toString() {
+		 return centrale.toString();
+	 }
 }

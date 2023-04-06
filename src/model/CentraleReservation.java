@@ -31,5 +31,14 @@ public class CentraleReservation <T extends EntiteReservable<Formulaire>,U exten
 		formulaire.setIdentificationEntite(numeroEntite);
 		return entite.reserver(formulaire);
 	}
+	
+	public String toString() {
+		StringBuilder retour = new StringBuilder();
+		for (int i = 0;i<entites.length && entites[i] != null;i++) {
+			retour.append(entites[i].toString());
+			retour.append("\n");
+		}
+		return retour.toString();
+	}
 
 }

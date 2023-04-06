@@ -10,8 +10,8 @@ public class Table extends EntiteReservable<Formulaire> {
 	}
 
 	
-	// Forcé de caster car mettre en argument empeche d'Override et mettre
-	// la genericite a FormulaireRestaurant empeche d'instancier une centrale.
+	// Forcé de caster car mettre FormulaireRestaurant en  type d'argument empeche d'Override et mettre
+	// la genericite de table a FormulaireRestaurant empeche d'instancier une centrale dans Restaurant.
 	public boolean estCompatible(Formulaire f) {
 		FormulaireRestaurant formulaire = (FormulaireRestaurant) f;
 		if (!(nbChaises == formulaire.getNbTable() || formulaire.getNbTable() == nbChaises - 1)) return false;
